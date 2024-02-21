@@ -16,8 +16,8 @@ for tc in range(1, T+1):
 
     for _ in range(N):
         x = input().split()
-        idx = int(x[0])
-        tree[idx] = x[1]
+        idx = int(x[0]) # 노드번호
+        tree[idx] = x[1] #  키값
 
     print(f'#{tc}', end=' ')
     inorder(1)
