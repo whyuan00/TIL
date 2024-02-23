@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\SSAFY\Desktop\새 폴더\TIL\알고리즘\day17\10726이진수표현.py", line 1, in <module>
+    T = int(input())
+ValueError: invalid literal for int() with base 10: '4 0'
