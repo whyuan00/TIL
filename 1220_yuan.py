@@ -32,10 +32,15 @@ for tc in range(1,T+1):
     # for i in arr:
     #     print(i)
 
-    res = 0
-    for i in range(100):
-        cnt = 0
-        now = arr[i][0]  # 처음값 할당. 0 or 1
-        for j in range(100):
-            if not arr[i][j]
-
+    # 개수 세는 함수
+    # res = 0
+    # for i in range(100):
+    #     cnt = 0
+    #     now = bool(arr[i][0])  # 처음값 할당. 0 or 1
+    #     for j in range(100):
+    #         if bool(arr[j][i]) != bool(now):
+    #             now = bool(arr[j][i]) # 값 바뀌면 now의 bool 값도 바꿔주기
+    #             if now == True:
+    #                cnt +=1 # now 가 0이 아닌걸로 바뀔때만 +1
+    #     res += cnt
+    # print(f'{tc} {res}')
