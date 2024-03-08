@@ -1,0 +1,32 @@
+
+<!-- 색입히기, 배치 등등은 css -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 3번 스타일 저장해서 한번에 바꾸기 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 스타일 태그는 css로 자동 바뀜 */
+    /* 2번을 주로 씀 */
+    /*h2 태그에 일괄 스타일 적용  */
+    h2 {
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- h1이 선택자, 안에 한줄한줄이 선언 -->
+  <!-- 1번 디자인 방법은 잘 안씀, 가독성 떨어지고 복잡해서 구조파악(유지보수)어렵 -->
+  <h1 style="color: blue; background-color: yellow;" >Inline Style</h1>
+  <h2>Internal Style</h2>
+  <h3>External Style</h3>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!-- 
+  행과 열 기준으로 요소를 배치하는 1차원 레이아웃
+
+  부모인 flex container 정하고 안에 flexitm 을 넣음
+
+   main axis, cros axis, 기준으로 움직임 
+  시작은 좌측상단 crossstart, mainstart
+
+
+  display: flex; 또는 inline-flex 설정 
+
+
+
+명령어 
+content: 여러줄
+items: 한줄
+self: 요소 한개 
+
+justify item 과 self 는 안씀, margin auto 로 배치 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      /* 큰 컨테이너로 만듦, flex 선언 */
+      display: flex; 
+      /* 기본값이 row 반대가 reverse */
+      /* flex-direction: row-reverse; */
+
+      /* 위아래로 반대쪽 세로로 흐름  */
+      /* flex-direction: column-reverse; */
+
+      /* 안내려가면 떨어뜨리기 */
+      flex-wrap: nowrap;
+      flex-wrap: wrap;
+
+      /* 메인축 기준 정렬 */
+      /* justify-content: flex-start; */
+      justify-content: center;
+      /* justify-content: flex-end; */
+
+      /* 교차축 기준 여러줄 정렬 */
+      /* align-content: flex-start; */
+      /* align-content: center; */
+      /* align-content: end; */
+
+      /* 교차축 기준 한줄 가운데 정렬 */
+      /* align-items: center; */
+      
+      height: 500px;
+      border: 1px solid black;
+      display: flex;
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+      flex-wrap: nowrap;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      /* justify-content: center; */
+      /* justify-content: flex-end; */
+      /* align-content: flex-start; */
+      /* align-content: center; */
+      /* align-content: flex-end; */
+      /* align-items: center; */
+    }
+
+    .post {
+      background-color: grey;
+      border: 1px solid black;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    .item1 {
+<<<<<<< HEAD
+
+      align-self: flex-start;
+
+    }
+
+    .item2 {
+
+      align-self: flex-end;
+
+
+=======
+      align-self: flex-start;
+    }
+
+    .item2 {
+      align-self: flex-end;
+>>>>>>> 0161810b49a0db9eecec4455ee05d8a348461ee0
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="post item1">
+      <h2>Post Title 1</h2>
+      <p>Post Content 1</p>
+    </div>
+    <div class="post item2">
+      <h2>Post Title 2</h2>
+      <p>Post Content 2</p>
+    </div>
+    <div class="post">
+      <h2>Post Title 3</h2>
+      <p>Post Content 3</p>
+    </div>
+    <div class="post">
+      <h2>Post Title 4</h2>
+      <p>Post Content 4</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

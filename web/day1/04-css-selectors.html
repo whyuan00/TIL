@@ -1,0 +1,90 @@
+
+<!--  css selector
+태그 여러개 쓸때도 하나의 태그만 각각 스타일 입히고 싶은경우
+-->
+<!-- specificity 명시도
+cs selector 에 가중치 계산하여 어떤 스타일 적용할지 결정
+동일 가중치일때는 마지막 나오는 선언이 사용cascade 
+
+
+클래스 선택자 등등이 더 가중치 높음 
+
+!important
+inline스타일
+선택자 :  id>class>요소
+선언 순서 
+
+# class 안에 기입하는 순서는 상관x
+# 태그 선언 순서가 중요함 
+### 중요한건 웬만하면 class 만쓰기 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 모든 글자 스타일 바꾸는 태그 '*' */
+    *{
+      color: red; 
+    }
+    
+    h2{
+      color: orange; 
+    }
+    
+    h3,
+    h4{
+      color: blue; 
+    }
+
+    /* .은 클래스 선택자 */
+    /* 원하는 부분에 다 그린으로 바꾸기 */
+    .green{
+      color: green; 
+    }
+    
+    /* id선택자, 단 id 가진 요소가 한개만 있어야함 */
+    #purple{
+      color: purple; 
+    }
+
+    /* 조건설정: green 의 span */
+    .green > span{
+      font-size: 50px;
+
+    }
+
+    /* 그린의 자손 모두 */
+    ol li{
+      color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1 class="green">Heading</h1>
+  <h2>선택자</h2>
+  <h3>연습</h3>
+  <h4>반가워요</h4>
+  <p id="purple">과목 목록</p>
+  <ul>
+    <li>파이썬</li>
+    <li>알고리즘</li>
+    <li>웹
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>PYTHON</li>
+      </ol>
+    </li>
+  </ul>
+  <p class="green">Lorem, <span>ipsum</span> dolor.</p>
+</body>
+
+</html>
