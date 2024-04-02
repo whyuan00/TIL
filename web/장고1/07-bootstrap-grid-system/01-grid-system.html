@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .box {
+      border: 1px solid black;
+      background-color: lightblue;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="text-center">Basic</h2>
+  <!-- 컨테이너 class 부트스트랩에 자동지정 
+  
+  
+  태그가 들어갈 범위를 미리 지정하고 시작-->
+  <div class="container">
+    <div class="row">
+      <div class="box">col</div>
+      <div class="box">col</div>
+      <div class="box">col</div>
+    </div>
+    <div class="row">
+      <div class="box col-4">col-4</div>
+      <div class="box col-4">col-4</div>
+      <div class="box col-4">col-4</div>
+    </div>
+    <div class="row">
+      <div class="box col-8">col-8</div>
+      <div class="box col-2">col-2</div>
+      <div class="box col-2">col-2</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- nestin: 그리드 안에 그리드 -->
+  <h2 class="text-center">Nesting</h2>
+  <div class="container">
+    <div class="row">
+      <div class="box col-4">col-4</div>
+      <div class="box col-8">
+        <div class="row">
+          <div class="box col-6">col-6</div>
+          <div class="box col-6">col-6</div>
+          <div class="box col-6">col-6</div>
+          <div class="box col-6">col-6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+<!-- offset 특정 부분 상쇄: 행 전체말고 부분만 컨텐츠 넣기 -->
+  <h2 class="text-center">Offset</h2>
+  <div class="container">
+    <div class="row">
+      <div class="box col-4">col-4</div>
+      <!-- 앞 4칸을 상쇄시키고 4칸이 등장 -->
+      <div class="box col-4 offset-4">col-4 offset-4</div>
+    </div>
+    <div class="row">
+      <div class="box col-3 offset-3">col-3 offset-3</div>
+      <div class="box col-3 offset-3">col-3 offset-3</div>
+    </div>
+    <div class="row">
+      <div class="box col-6 offset-3">col-6 offset-3</div>
+    </div>
+  </div>
+
+  <hr>
+<!-- guter: 컬럼 사이의 여백: x축은 패딩, y축은 마진
+그 이유는 같은 row. 안에서는 padding 
+row와 row 사이는 외부라서 margin (현재 한줄씩 row 넣고 있음)-->
+
+<!-- x는 좌우 의미 mx-5 는 마진 좌우 동일하게 5 -->
+  <h2 class="text-center">Gutters(gx-0)</h2>
+  <div class="container">
+    <!-- gx-0: div로 인해 생긴 좌우 여백 없애 -->
+    <div class="row gx-0">
+      <div class="col-6">
+        <div class="box">col</div>
+      </div>
+      <div class="col-6">
+        <div class="box">col</div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <h2 class="text-center">Gutters(gy-5)</h2>
+  <div class="container">
+    <!-- y는 y방향, g-5는 상하좌우 모두 -->
+    <div class="row gy-5">
+      <di class="col-6">
+        <div class="box">col</div>
+      </di gy-5v>
+      <di class="col-6">
+        <div class="box">col</div>
+      </di gy-5v>
+      <di class="col-6">
+        <div class="box">col</div>
+      </di gy-5v>
+      <div class="col-6">
+        <div class="box">col</div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+
+  <h2 class="text-center">Gutters(g-5)</h2>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-6">
+        <div class="box">col</div>
+      </div>
+      <div class="col-6">
+        <div class="box">col</div>
+      </div>
+      <div class="col-6">
+        <div class="box">col</div>
+      </div>
+      <div class="col-6">
+        <div class="box">col</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

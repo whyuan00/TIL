@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Articles</h1>
+  {% comment %} 장고에서 user 데이터에 바로접근가능하게 하는게 context processors 
+               자주 사용하는 데이터 목록은 미리 템플릿에 로드되어있음
+ 
+  {% endcomment %}
+  {% comment %} user.username에는 아무값없어서 비로그인유저 빈값 {% endcomment %}
+  {% comment %} user라고 쓰면 user객체라서 바로 anaonymous로 나옴 {% endcomment %}
+  <h2>반갑습니다, {{user}} 님 </h2> 
+  <a href="{% url "accounts:login" %}">LOGIN</a>
+  <form action="{% url "accounts:logout" %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value='logout'>
+
+  </form>
+  <a href="{% url "articles:create" %}">CREATE</a>
+  <hr>
+  {% for article in articles %}
+    <p>글 번호: {{ article.pk }}</p>
+    <a href="{% url "articles:detail" article.pk %}">
+      <p>글 제목: {{ article.title }}</p>
+    </a>
+    <p>글 내용: {{ article.content }}</p>
+    <hr>
+  {% endfor %}
+</body>
+</html>
