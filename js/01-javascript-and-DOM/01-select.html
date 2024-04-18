@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 class="heading">DOM 선택</h1>
+  <a href="https://www.google.com/">google</a>
+  <p class="content">content1</p>
+  <p class="content">asdasdasdasd</p>
+  <p class="content">content3</p>
+  <ul>
+    <li>list1</li>
+    <li>list2</li>
+  </ul>
+
+  <script>
+    console.log(document.querySelector('.heading'))
+    console.log(document.querySelector('.content'))
+<<<<<<< HEAD
+    // console.log(document.querySelector('body> '))
+    console.log(document.querySelectorAll('.content'))
+    console.log(document.querySelectorAll('ul > li'))
+
+  </script>
+
+=======
+    console.log(document.querySelector('body > p:nth-child(4)'))
+    console.log(document.querySelectorAll('.content'))
+    console.log(document.querySelectorAll('ul > li'))
+  </script>
+>>>>>>> 209db32ab6d959ca893c5c63ab0f2f7220b34308
+</body>
+
+</html>
