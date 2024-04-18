@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // map 1
+        
+        const numbers = [1, 2, 3]
+        
+        const doublefunc = function(number){
+            return number *2 
+        }
+        const doublenumbers = numbers.map(doublefunc)
+        
+        
+        // map 2
+        const newNumbers = [4, 9, 16]
+
+        const doublenumbers2 = newNumbers.map((number) => 
+            number *number
+        )
+        console.log(doublenumbers2)
+
+        // map 3
+
+        const images = [
+        { height: '34px', width: '39px' },
+        { height: '54px', width: '19px' },
+        { height: '83px', width: '75px' },
+        ]
+        
+        const height = images.map(
+            function(image) {
+                return image.height
+            }
+        )
+        console.log(height)
+        </script>
+</body>
+</html>

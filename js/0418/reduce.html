@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // reduce 1
+        const tests = [90, 90, 80, 77]
+        const sum = tests.reduce((total,num) => 
+            total+num
+        );
+        console.log(sum)
+
+        const avg = tests.reduce(function(total,num) {
+            return (total+num)/2
+        })
+        console.log(avg)
+        // reduce 2
+        const names = ['harry', 'isaac', 'julie', 'julie', 'edward']
+
+    
+        const namecheck = names.reduce(function (acc,name){
+            if (name in acc){
+                acc[name] ++
+            } else {
+                acc[name]=1
+
+            }
+            return acc 
+        },{}); //초기값 acc 생성해주야함, 없으면 자동으로 앞에꺼 두개 
+        console.log(namecheck)
+
+        // reduce 3
+        const baseUrl = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?'
+
+        const api = {
+        key: 'API_KEY',
+        targetDt: '20200115',
+        }
+    </script>
+    
+</body>
+</html>
