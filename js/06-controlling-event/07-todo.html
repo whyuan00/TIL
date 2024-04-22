@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" class="input-text">
+  <button id="btn">+</button>
+  <ul></ul>
+
+  <script>
+    //선택하기
+    const inputag = document.querySelector('.input-text')
+    const btntag = document.querySelector('#btn')
+    const ultag = document.querySelector('ul')
+
+    // 버튼 클릭했을때 발생
+    addtodo = function(event) {
+      const data = inputag.value
+      
+      if (!data.trim()) {
+        window.alert('내용을 입력하세요')
+      }
+        
+        // litag 만들기
+        const litag = document.createElement('li')
+        litag.textContent = data; 
+        
+        ultag.appendChild(litag)
+        //input.value 비워주기
+        inputag.value = ''
+
+    }
+
+    btntag.addEventListener('click',addtodo)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="text-input">
+  <p></p>
+
+  <script>
+
+//input이벤트 실습 
+const inputtag = document.querySelector("#text-input")
+const ptag = document.querySelector('p')
+//input 이벤트 발생시 실행
+const inputhandler = function(event) {
+  // word = ''
+  // word+=event.data
+  // console.log(word)
+  console.log(event.currentTarget.value) // 누적값 가짐 
+}
+
+//선택한 input태그에 이벤트 핸들러 부착
+inputtag.addEventListener('input',inputhandler)
+
+  </script>
+</body>
+
+
+</html>
