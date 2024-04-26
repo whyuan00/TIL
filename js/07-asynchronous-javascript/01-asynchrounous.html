@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //3초 뒤에 콜백함수 호출
+    // 비동기 작업, 1번 처리되는동안 3번이 먼저 실행됨 
+    // 병렬적으로 수행, 먼저 끝나는 순으로 뱉음 
+    //js는 single thread 로 한번에 하나 작업만 수행 
+
+    //환경(런타임)은 js가 비동기처리할수있도록 대신 처리해줌 
+    // 환경: 브라우저와 노드 두개 있음 
+
+    //이경우 콜백함수가 web api로 넘어가서 실행됨 
+    //3초 지나면 webapi 에서 대기실(테스크 큐)로 들어감
+    // 이벤트루프는 콜스택과 테스크 큐 보고있다가 콜스택 비어있으면 올림
+    
+
+    //콜백함수는 바로 처리하는게 아니라서 call->webapi->테스크큐->call 로 가게됨
+    // 그래서 콜백 
+    const slowRequest = function (callBack) {
+      console.log('1. 오래 걸리는 작업 시작 ...')
+      setTimeout(function () {
+        callBack()
+      }, 3000)
+    }
+
+    const myCallBack = function () {
+      console.log('2. 콜백함수 실행됨')
+    }
+
+    slowRequest(myCallBack)
+
+    console.log('3. 다른 작업 실행')
+
+    // 출력결과
+  </script>
+</body>
+
+</html>

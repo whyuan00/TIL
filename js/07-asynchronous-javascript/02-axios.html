@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // ajax 복잡하고 동적인 웹페이지 구성 프로그래밍 방식 
+    // 브라우저와 서버간 데이터를 비동기적으로 교환해서
+    // 페이지 전체 새로고침않아도 동적으로 데이터 불러서 화면갱신 
+
+    //xhr은 서버와 상호작용할떄 쓰는 객체
+    // 클라이언트는 js로   객체 생성및 요청보냄
+    // 서버에서 새로운 페이지를 주는게 아니라 json으로 줌
+    // 필요한 부분에 대해 데이터만 처리후 응답, 기존 페이지 일부를 수정 
+    // 
+    // axios 는 js에서 사용되는 http 라이브러리(파이썬의 리퀘스트같은거)
+
+    //1.axios로 xhr객체요청, ajax요청처리&응답데이터생성&json응답, axios가 promise로 응답객체 제공
+    const URL = 'https://api.thecatapi.com/v1/images/search'
+
+    // 1.
+    const promiseobj = axios({
+      method:'get',
+      url: URL
+    }) // request.get(URL)
+    // console.log(promiseobj)
+
+
+    // axios로 보낸건 비동기 요청, catapi에서 응답을 해줘야함
+    // 따라서 webapi로 보내진 사이에 '시간확인'이 먼저 처리됨 
+    promiseobj.then((response) => {
+      console.log(response)
+      console.log(response.data)
+      return response.data 
+      console.log(response.data[0].url)
+
+    }).then ((response) => {
+
+    })
+    console.log('시간확인') // 이거부터 출력 
+
+    // 2.
+    // 프로미스 객체 안받아도됨
+    axios({
+      method:'get',
+      url: URL
+    })
+      .then((response) => {
+
+    })
+      .then()
+      .catch()
+</script>
+
+</body>
+
+</html>

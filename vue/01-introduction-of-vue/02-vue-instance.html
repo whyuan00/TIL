@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 자동 언래핑 되기때문에 .value안해도됨 -->
+    <h1> {{ message.split(' ').reverse().join('') }}</h1>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+
+
+    const { createApp, ref } = Vue 
+
+    // 모든 어플 시작은 은 크리에이트함수로 새로운 인스턴스 생성 
+    const app1 = createApp({
+      setup() {
+        //value 속성이 있는 ref 객체로 래핑하여 반환
+        // ref 값이 변경되면 자동업데이트
+        const message = ref("hello vue!")
+        console.log(message.value) // hello vue!
+
+        return {
+          message
+        }
+
+      }
+    })
+    // 마운트는 한번만 호출 
+    app1.mount('#app')
+  </script>
+</body>
+
+</html>
