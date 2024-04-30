@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="count++">Add 1</button>
+    <p>Count: {{ count }}</p>
+    <p>{{ message }}</p>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref , onMounted , onUpdated } = Vue
+
+    const app = createApp({
+      setup() {
+        const count = ref(0)
+        const message = ref(null)
+
+        // 라이프사이클 훅: onmounted-> 미리 데이터 세팅필요할때 여기에 표시 
+        onMounted(() => {
+          console.log('mounted')
+        })
+        // 업데이트될때 쓰는 훅: onupdated
+        let cnt = ref(0)
+        onUpdated(() => {
+          cnt.value = cnt.value+1
+          console.log(cnt.value)
+          message.value = `count ${cnt.value}번 수정됨`
+        })
+
+        return {
+          count,
+          message
+        }
+      },
+    })
+
+    app.mount('#app')
+
+  </script>
+</body>
+
+</html>
