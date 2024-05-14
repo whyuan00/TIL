@@ -1,1 +1,0 @@
-# A. csv 파일을 dataframe 으로 변환
