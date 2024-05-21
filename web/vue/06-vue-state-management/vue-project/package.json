@@ -11,12 +11,8 @@
   "dependencies": {
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
-<<<<<<< HEAD
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
-=======
-    "vue": "^3.4.21"
->>>>>>> 0db8f7e851a046df1112dd11b4859c48df8d7aac
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

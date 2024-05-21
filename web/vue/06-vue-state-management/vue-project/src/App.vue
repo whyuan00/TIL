@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 <div>
 <h1>Todo Project</h1>
 <h2> 완료된 Todo: {{ store.doneTodosCount }} </h2>
@@ -38,23 +37,4 @@ const store = useCounterStore()
 // </script>
 <style scoped>
 
-=======
-  <div>
-    <h1>Todo Project</h1>
-    <h2>완료된 Todo : {{ store.doneTodoCount }}</h2>
-    <TodoList />
-    <TodoForm />
-  </div>
-</template>
-
-<script setup>
-import TodoForm from '@/components/TodoForm.vue'
-import TodoList from '@/components/TodoList.vue'
-import { useCounterStore } from './stores/counter'
-
-const store = useCounterStore()
-</script>
-
-<style scoped>
->>>>>>> 0db8f7e851a046df1112dd11b4859c48df8d7aac
 </style>
